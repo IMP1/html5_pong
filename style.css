@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
 
 /* Loaded images to be used ingame */
     .game-resources img {
@@ -12,11 +13,11 @@
     
 /* General HTML style */
     html, body {
-        margin: 0px;
+        margin: 0;
     }
     
 /* Centering content */
-    header, footer {
+    header, footer, section {
         width: 40%;
         margin: 0 auto;
         text-align: center;
@@ -24,14 +25,61 @@
     
     #game-window {
         /* width needs to specified, but that's game-specific */
-        margin: 32px;
+        margin: 2em;
         margin-left: auto;
         margin-right: auto;
+    }
+    
+/* General site style */
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+    }
+    
+    ul {
+        margin: 0;
+    }
+    
+    section ul {
+        display: inline-block;
+    }
+    
+    section ul li {
+        text-align: left;
+    }
+    
+    footer {
+        margin-top: 3em;
+        margin-bottom: 1em;
+		color: #888;
+		color: rgba(0, 0, 0, 0.5);
+	}
+	
+    footer a {
+        color: #ccc;
+        color: rgba(0, 0, 0, 0.7);
+    }
+		
+    footer a:hover {
+        color: #000;
+        color: rgba(0, 0, 0, 1.0);
+    }
+    
+    footer ul {
+        list-style: none;
+        display: block;
+    }
+    
+    footer li {
+        display: inline-block;
+        padding-right: 2.5em;
     }
     
 /* Game-specific style */
     body {
         font-family: 'Josefin Sans', Gadget, sans-serif;
+        font-size: 1.1em;
     }
     
     #game-window {

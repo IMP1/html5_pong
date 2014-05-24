@@ -10,12 +10,15 @@ var canvas = canvasElement.getContext("2d");
 
 /* Keep track of mouse position */
 var mouse = {x: 0, y: 0};
-document.addEventListener('mousemove', function(e){
+function getMousePosition(e) {
     var winX = (e.clientX || e.pageX);
     var winY = (e.clientY || e.pageY);
+    winX += document.body.scrollLeft;
+    winY += document.body.scrollTop;
     mouse.x = winX - document.getElementById("game-window").offsetLeft;
     mouse.y = winY - document.getElementById("game-window").offsetTop;
-}, false);
+}
+document.addEventListener('mousemove', getMousePosition, false);
 
 var gameOver = false;
 
@@ -123,6 +126,10 @@ function mousePressed(event) {
 }
 
 function mouseReleased(event) {
+    getMousePosition(event);
+    if (mouse.x < 0 || mouse.x > CANVAS_WIDTH || mouse.y < 0 || mouse.y > CANVAS_HEIGHT) {
+        return;
+    }
     if (gameOver) {
         gameOver = false;
         resetBall();
