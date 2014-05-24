@@ -1,0 +1,37 @@
+/* Loaded images to be used ingame */
+    .game-resources img {
+        display: none;
+    }
+    
+/* Canvas style */
+    canvas {
+        cursor: none;
+    }
+    
+/* General HTML style */
+    html, body {
+        margin: 0px;
+    }
+    
+/* Centering content */
+    header, footer {
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    #game-window {
+        /* width needs to specified, but that's game-specific */
+        margin: 32px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+/* Game-specific style */
+    body {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    #game-window {
+        width: 640px;
+    }
