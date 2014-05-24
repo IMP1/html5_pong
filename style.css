@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
 /* Loaded images to be used ingame */
     .game-resources img {
@@ -31,7 +31,7 @@
     
 /* Game-specific style */
     body {
-        font-family: 'Josefin Sans', monospace;
+        font-family: 'Josefin Sans', Gadget, sans-serif;
     }
     
     #game-window {
